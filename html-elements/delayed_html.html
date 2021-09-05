@@ -21,7 +21,7 @@
 </style>
 <title>Delayed HTML</title>
 </head>
-<body onload="on();  timeFunction();">
+<body onload="on();  disappearOverlay();delayElementDisplay();">
 <div>
 	<h1>Welcome to the World of Test Automation !</h1>
 	<div>This site is used for DEMO purposes only. <button onclick="on()">Turn on overlay effect</button></div>
@@ -34,7 +34,7 @@
 
   <form>
     <label>First Name</label>
-    <input type="text" id="fname" name="First Name" placeholder="Your first name.." class="input">
+    <input type="text" id="fname" name="First Name" placeholder="Your first name.." class="input" style="display: none;">
 
     <label>Last Name</label>
     <input type="text" id="lname" name="Last Name" placeholder="Your last name.." class="input">
@@ -68,10 +68,17 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
-function timeFunction() {
+function disappearOverlay() {
     setTimeout(
 	function(){ document.getElementById("overlay").style.display = "none"; }
 	,5000);
+	
+}
+
+function delayElementDisplay(){
+ 	setTimeout(
+	function(){ document.getElementById("fname").style.display = "block"; }
+	,4000);
 }
 
 </script>
