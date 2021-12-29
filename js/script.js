@@ -9,7 +9,7 @@ function getValuesFromSession(){
 	for (var i = 0; i < sessionStorage.length; i++) {
 		var key = sessionStorage.key(i);
 		var value = sessionStorage.getItem(key);
-		document.getElementById('container').innerHTML="<p>"+document.getElementById('container').innerHTML+`${key} - ${value}`+"</p>";
+		document.getElementById('container').innerHTML=document.getElementById('container').innerHTML+"<p><label>"+`${key}</label> - <span>${value}`+"</span></p>";
 	}
 }
 
