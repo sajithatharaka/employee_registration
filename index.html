@@ -16,9 +16,14 @@ function login() {
 	document.getElementById('message').style.display = 'block';
  }
 }
+
+function getVersion(){
+	document.getElementById('version').innerHTML = 'v'+Math.floor(Math.random() * 10)+'.'+Math.floor(Math.random() * 10)+'.'+Math.floor(Math.random() * 10);
+
+}
 </script>
 </head>
-<body>
+<body onload="getVersion()">
 <div>
 	<h1>Welcome to the World of Test Automation !</h1>
 	<div>This site is used for DEMO purposes only. </div>
@@ -37,6 +42,9 @@ function login() {
 	<input type="submit" id="submit" value="Submit">
    </form>
 </div>
+<hr style="border-top: 1px solid  #f2f2f2;"></hr>
+
+<div style="font-size:10px" id="version">Version</div>
 
 </body>
 </html>
